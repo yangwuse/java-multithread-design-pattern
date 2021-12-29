@@ -1,0 +1,14 @@
+package ch2_immutable;
+
+// 显示 Person 实例的线程类
+public class PrintPersonThread extends Thread{
+    private Person person;
+    public PrintPersonThread(Person person) {
+        this.person = person;
+    }
+    public void run() {
+        while (true) {
+            System.out.println(Thread.currentThread().getName() + " prints " + person);
+        }
+    }
+}
